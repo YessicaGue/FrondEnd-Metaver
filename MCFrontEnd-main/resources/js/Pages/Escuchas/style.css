@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'CompactaSHOP';
+    src: url('../../../assets/fonts/CompactaSHOP-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Anton';
+    src: url('../../../assets/fonts/Anton-Regular_1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .bg-orange-400 {
+    background: #ff8200;
+}
+
+.rounded-bl-3xl {
+    border-bottom-left-radius: 7em;
+}
+
+.lg\:text-8xl {
+    font-size: 10rem;
+    border: 0;
+}
+
+span.text-white.text-9xl.w-full.xs\:text-xl.sm\:text-6xl.md\:text-7xl.lg\:text-8xl.xl\:text-9xl.tracking-wider {
+    font-size: 10.5rem !important;
+    letter-spacing: 10px !important;
+    line-height: 0;
+}
+
+.text-orange-500 {
+    color: #ff8200;
+}
+
+.text-7xl.w-full.text-center.text-orange-500 {
+    font-size: 5.5rem;
+}
+
+.tracking-widest {
+    letter-spacing: 1;
+    font-size: 1.5em;
+}
+
+textarea.mb-4.shadow-xl.rounded-xl {
+    border: 1px solid #33333336!important;
+    box-shadow: 11px 9px 30px 0px #33333336;
+    resize: none;
+    margin: 0;
+}
+
+button {
+    box-shadow: none !important;
+    font-size: 1.4em !important;
+    font-weight: 700 !important;
+}
+
+span.text-white.text-9xl.w-full.xs\:text-xl.sm\:text-6xl.md\:text-7xl.lg\:text-8xl.xl\:text-9xl.tracking-wider {}
+
+span.text-white.text-9xl.w-full.xs\:text-xl.sm\:text-6xl.md\:text-7xl.lg\:text-8xl.xl\:text-9xl.border-b-8.border-white:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 33rem;
+    background: url(linea_banner.png) center center no-repeat;
+    background-size: cover;
+    height: 69px;
+    z-index: 100;
+    /* left: 0; */
+    right: 0;
+    margin: 0 auto;
+}
+
+span.text-white.text-9xl.w-full.xs\:text-xl.sm\:text-6xl.md\:text-7xl.lg\:text-8xl.xl\:text-9xl.border-b-8.border-white {
+    position: relative;
+}
+
+.bg-orange-400.h-\[400px\] {
+    height: auto;
+}

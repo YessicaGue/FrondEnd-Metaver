@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Mona-Sans';
+    src:
+        url('../assets/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
+        url('../assets/fonts/Mona-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+}
+
+@font-face {
+    font-family: 'Hubot-Sans';
+    src:
+        url('../assets/fonts/Hubot-Sans.woff2') format('woff2 supports variations'),
+        url('../assets/fonts/Hubot-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+}
+
+body {
+    margin: 0 !important;
+}
+
+.glass-effect {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.69);
+}
+
+*::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+*::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-button:increment, *::-webkit-scrollbar-button {
+    display: none;
+}
+
+*::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ff8300;
+    border: 2px solid #f1f2f3;
+    border-radius: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 10px;
+    border-color: white;
+}
+
+.overlay div::-webkit-scrollbar-track {
+    margin: .5rem 0;
+}
+
+.border-secondary:focus {
+    --tw-border-opacity: 1;
+    border-color: #6f1fb4 !important;
+}
+
+.MuiOutlinedInput-input:focus {
+    border-color: transparent !important;
+    box-shadow: none;
+}
+
+[type="tel"]:focus {
+    border-color: transparent !important;
+    box-shadow: none;
+}
+
+textarea:focus {
+    border-color: transparent !important;
+    box-shadow: none;
+}
+
+.jg-active-nav {
+    background-color: white;
+    -webkit-transition: all ease-out .4s;
+    -moz-transition: all ease-out .4s;
+    -o-transition: all ease-out .4s;
+    transition: all ease-out .4s;
+}
+
+.jg-nav {
+    background-color: unset;
+    -webkit-transition: all ease-out .4s;
+    -moz-transition: all ease-out .4s;
+    -o-transition: all ease-out .4s;
+    transition: all ease-out .4s;
+}
+
+.appear {
+    opacity: 0;
+    animation-name: appear;
+    animation-duration: .4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.disappear {
+    opacity: 1;
+    animation-name: disappear;
+    animation-duration: .4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.appear-from-right {
+    /* opacity: 0; */
+    transform: translateX(100%);
+    animation-name: appear-from-right;
+    animation-duration: .4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.disappear-to-right {
+    /* opacity: 1; */
+    transform: translateX(0%);
+    animation-name: disappear-to-right;
+    animation-duration: .4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes appear-from-right {
+    0% {
+        /* opacity: 0; */
+        transform: translateX(100%);
+    }
+    100% {
+        /* opacity: 1; */
+        transform: translateX(0%);
+    }
+}
+
+@keyframes disappear-to-right {
+    0% {
+        /* opacity: 1; */
+        transform: translateX(0%);
+    }
+    100% {
+        /* opacity: 0; */
+        transform: translateX(100%);
+    }
+}
+
+.titles {
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    font-size: calc(25px + (45 - 25) * ((100vw - 375px)/(1920 - 375)));
+    line-height: calc(30px + (55 - 30) * ((100vw - 375px)/(1920 - 375)));
+    color: #000;
+}
+
+.subtitles {
+    font-size: calc(12px + (16 - 12) * ((100vw - 375px)/(1920 - 375)));
+    line-height: calc(16px + (21 - 16) * ((100vw - 375px)/(1920 - 375)));
+    letter-spacing: calc(1.56px + (2.08 - 1.56) * ((100vw - 375px)/(1920 - 375)));
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: calc(5px + (10 - 5) * ((100vw - 375px)/(1920 - 375)));
+}
+
+.wysiwyg iframe {
+    aspect-ratio: 16/9;
+    height: 100%;
+	width: 100%;
+}
+
+.tox-edit-area__iframe {
+    cursor: text;
+}
+
+.tox-tinymce {
+    border-radius: 4px !important;
+    border: 1px solid rgba(0, 0, 0, 0.23) !important;
+    font-family: AbeeZee !important;
+}
+
+.tox-editor-header {
+    background-color: white !important;
+}
+
+.tox-menubar, .tox-toolbar-overlord, .tox-toolbar__primary {
+    background-color: inherit !important;
+}
+
+.tox .tox-tbtn {
+    transition: all 0.3s ease;
+}
+
+.tox .tox-tbtn:hover, .tox .tox-tbtn:active, .tox .tox-tbtn:focus, .tox .tox-collection--list .tox-collection__item--active {
+    background: #ff8300 !important;
+    cursor: pointer;
+}
+
+.tox .tox-collection--list .tox-collection__item--active {
+    background: rgba(255,131,0,.25) !important;
+    cursor: pointer;
+}
+
+.tox .tox-dialog__body-nav-item--active {
+    border-bottom: 2px solid #ff8300 !important;
+    color: #ff8300 !important;
+}
+
+.tox .tox-button {
+    background-color: #ff8300 !important;
+    border-color: #ff8300 !important;
+}
+
+.tox .tox-button--secondary {
+    background-color: #f0f0f0 !important;
+    border-color: #f0f0f0 !important;
+}
+
+.tox-icon {
+    color: #f0f0f0 !important;
+}
+
+.tox-textfield:focus {
+    border-color: #ff8300 !important;
+    box-shadow: 0 0 0 2px rgba(255,131,0,.25) !important;
+}
+
+.tox .tox-dialog__body-nav-item:focus {
+    background-color: rgba(255,131,0,.1) !important;
+}
+
+.tox .tox-tbtn:hover svg {
+    fill: white !important;
+}
+
+.tox .tox-split-button:hover, .tox .tox-split-button:focus {
+    box-shadow: 0 0 0 1px #ff8300 inset !important;
+}
+
+.tox .tox-mbtn:hover:not(:disabled):not(.tox-mbtn--active), .tox .tox-mbtn--active {
+    background: #ff8300 !important;
+    color: white !important;
+}
+
+.tox-tbtn--select:hover, .tox-tbtn--select:focus {
+    color: white !important;
+}
+
+.rc-anchor-invisible-text {
+    background-color: #ff8300 !important;
+}
+
+/* Rotate an image with animation endless */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+.rotate-element {
+    animation: rotate 20s infinite linear;
+}

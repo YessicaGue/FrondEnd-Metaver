@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'CompactaSHOP';
+    src: url('../../../assets/fonts/CompactaSHOP-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Anton';
+    src: url('../../../assets/fonts/Anton-Regular_1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../../../assets/fonts/Montserrat-Black.woff') format('woff');
+    font-weight: bold;
+    font-style: bold;
+  }
+  
+  .bg-orange-400 {
+    background: #ff8200;
+  }
+
+  .t-n{
+    /* font-weight: 900 !important; */
+    font-size: 24px;
+    font-weight: bolder;
+  }
+
+  .t-nc{
+    /* font-weight: 900 !important; */
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .t-mc {
+    font-size: 8rem;
+}
